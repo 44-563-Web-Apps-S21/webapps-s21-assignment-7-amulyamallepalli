@@ -70,8 +70,8 @@
 				}
 			}
 			if (check == 0) {
-				
-				console.log(0);
+				var removeItem = getRandomIntInclusive(0, 9);
+				console.log(removeItem);
 
 				listyItems[removeItem].remove();
 				console.log("We get rid of the " + removeItem + " item.");
@@ -83,7 +83,12 @@
 
 	}
 
-	
+	function getRandomIntInclusive(min, max) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+	}
+
 	
 </script>
 </html>	

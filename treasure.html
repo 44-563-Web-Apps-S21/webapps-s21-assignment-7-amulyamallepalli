@@ -89,10 +89,25 @@
 
     var clickCount = 0;
     var treasureLocation = 18;
-    console.log(treasureLocation);
+    var treasureLocation = getRandomIntInclusive(0, 24);
+        console.log(treasureLocation);
 
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+        }
+
+        function newGame() {
+            var clickCount = 0;
+            var treasureLocation = getRandomIntInclusive(0, 24);
+            console.log(treasureLocation);
+            document.getElementById("clicks").innerHTML = "Number of clicks is " + clickCount + ".";
+
+            document.getElementById("distance").innerHTML = "Distance is unknown.";
+        }
+    
   
-
     function makeGuess(position){
         id = ids[position]
         imgPosition = document.getElementById(id)
